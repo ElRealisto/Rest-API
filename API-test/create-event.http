@@ -1,0 +1,9 @@
+POST http://localhost:8080/events
+content-type: application/json
+
+{
+    "Name": "New test event",
+    "Descr": "After deletion",
+    "Local": "Kyiv, Ukraine",
+    "DateTime": "2026-09-25T18:00:00.000Z"
+}
