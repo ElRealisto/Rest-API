@@ -52,7 +52,7 @@ func GetUsers() ([]User, error) {
 
 	for rows.Next() {
 		var user User
-		err := rows.Scan(&user.Email, &user.Pswd, &user.ID)
+		err := rows.Scan(&user.ID, &user.Email, &user.Pswd)
 
 		if err != nil {
 			return nil, err
@@ -68,7 +68,7 @@ func (u User) UserValidation() error {
 	row := db.DB.QueryRow(query, u.Email)
 
 	var dbStoredPswd string
-	err := row.Scan(dbStoredPswd)
+	err := row.Scan(&dbStoredPswd)
 
 	if err != nil {
 		return errors.New("email is incorrect") // here checks email
