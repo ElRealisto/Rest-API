@@ -63,21 +63,21 @@ func GetUsers() ([]User, error) {
 	return users, nil
 }
 
-func (u User) UserValidation() error {
-	query := "SELECT pswd FROM users WHERE email = ?"
+func (u *User) UserValidation() error {
+	query := "SELECT id, pswd FROM users WHERE email = ?"
 	row := db.DB.QueryRow(query, u.Email)
 
 	var dbStoredPswd string
-	err := row.Scan(&dbStoredPswd)
+	err := row.Scan(&u.ID, &dbStoredPswd)
 
 	if err != nil {
-		return errors.New("email is incorrect") // here checks email
+		return errors.New("email or password is incorrect") // here checks email
 	}
 
 	pswdIsValid := utils.CompareHashAndPassword(u.Pswd, dbStoredPswd)
 
 	if !pswdIsValid {
-		return errors.New("password is incorrect") // here checks password
+		return errors.New("email or password is incorrect") // here checks password
 	}
 	return nil
 }

@@ -12,12 +12,12 @@ type Event struct {
 	Descr    string    `binding:"required"` // description of an event
 	Local    string    `binding:"required"` // place, where event should take place
 	DateTime time.Time `binding:"required"`
-	UserID   int
+	UserID   int64
 }
 
 // var events = []Event{}
 
-func (e Event) Save() error {
+func (e *Event) Save() error {
 	query := `
 	INSERT INTO events(name, descr, local, dateTime, user_id)
 	VALUES (?, ?, ?, ?, ?)`

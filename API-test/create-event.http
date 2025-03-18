@@ -1,8 +1,9 @@
 POST http://localhost:8080/events
 content-type: application/json
+authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3QyQHRlc3QuY29tIiwiZXhwIjoxNzQyMjIwNTU2LCJ1c2VySWQiOjJ9.zIcGhPHtniB38TMinHrZpFqWDxJOGveaVjUGDD_ymdw
 
 {
-    "Name": "New test event",
+    "Name": "New test event User 2",
     "Descr": "After deletion",
     "Local": "Kyiv, Ukraine",
     "DateTime": "2026-09-25T18:00:00.000Z"
