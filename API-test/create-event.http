@@ -1,10 +1,10 @@
 POST http://localhost:8080/events
 content-type: application/json
-authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3QyQHRlc3QuY29tIiwiZXhwIjoxNzQyMjIwNTU2LCJ1c2VySWQiOjJ9.zIcGhPHtniB38TMinHrZpFqWDxJOGveaVjUGDD_ymdw
+authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3QxQHRlc3QuY29tIiwiZXhwIjoxNzQyMjkyNDI3LCJ1c2VySWQiOjF9.nyf73s1wclZEOgN8C_UCZs9booqQo-IpUJzJGcYt4og
 
 {
-    "Name": "New test event User 2",
-    "Descr": "After deletion",
+    "Name": "New test event by User 1",
+    "Descr": "Registration testing",
     "Local": "Kyiv, Ukraine",
     "DateTime": "2026-09-25T18:00:00.000Z"
 }

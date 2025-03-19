@@ -1,9 +1,10 @@
-PUT http://localhost:8080/events/2
+PUT http://localhost:8080/events/4
 content-type: application/json
+authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3QyQHRlc3QuY29tIiwiZXhwIjoxNzQyMjg5MDUyLCJ1c2VySWQiOjJ9.5JL49o4bJTVI5QdW1oYJZmg514aHse8p4bjaVYRTU3o
 
 {
     "Name": "Test event",
     "Descr": "A test event",
-    "Local": "London, UK",
+    "Local": "Kyiv, Ukraine",
     "DateTime": "2025-03-15T18:00:00.000Z"
 }
